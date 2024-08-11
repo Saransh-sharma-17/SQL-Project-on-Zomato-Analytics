@@ -1,3 +1,5 @@
+------------------CREATING ZOMATO TABLE SCRIPT----------------------
+
 CREATE TABLE goldusers_signup
 (userid integer,
  gold_signup_date date); 
@@ -189,15 +191,4 @@ ON a.product_id = p.product_id ORDER BY userid ASC) AS b;
 
 SELECT *, RANK() OVER(PARTITION BY userid ORDER BY created_date ASC) AS rank FROM sales;
 
---- 12. Rank all the transations of each member whenever they are a zomato gold member for every no gold member 
---      transaction mark as na
-
-SELECT b.*,CASE WHEN rnk=0 THEN 'na' ELSE rnk END as rnkk FROM 
-(SELECT a.*,CAST((CASE 
-WHEN gold_signup_date is null THEN 0 
-ELSE RANK() OVER(PARTITION BY userid ORDER BY created_date DESC) END) AS varchar) AS rnk FROM 
-(SELECT s.userid, s.created_date, s.product_id, gus.gold_signup_date
-FROM sales as s
-LEFT JOIN goldusers_signup as gus
-ON s.userid = gus.userid and created_date >= gold_signup_date) AS a) AS b
 
