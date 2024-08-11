@@ -52,7 +52,7 @@ The goal of this project is to analyze the Zomato dataset to gain insights into 
 
 ## Tools:
 
-This project was completed using SQL to analyze the dataset and answer the questions posed. The results are presented in a clear and concise manner and summaries to help illustrate key findings.
+This project was completed using Postgre SQL to analyze the dataset and answer the questions posed. The results are presented in a clear and concise manner and summaries to help illustrate key findings.
 
 ## Conclusion:
 
