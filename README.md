@@ -27,6 +27,7 @@ The goal is to answer 11 questions that provide insights into the dataset's char
 --- 2. How many days has each customer visited zomato?
 
 --- 3. What was the first product purchased by each customer?
+
 --- 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
 
 --- 5. Which item was the most popular for each customer?
